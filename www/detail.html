@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Saver - Nuevo Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Pass saver - Nuevo Site</h2>
+        </header>
+
+        <form id="siteForm">
+            <div class="form-group">
+                <label for="name">Nombre del Sitio <span style="color:red">*</span></label>
+                <input type="text" id="name" placeholder="Ej: Google, Netflix..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input type="text" id="url" placeholder="http://www.ejemplo.com">
+            </div>
+
+            <div class="form-group">
+                <label for="user">Usuario <span style="color:red">*</span></label>
+                <input type="text" id="user" placeholder="Tu usuario o email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña <span style="color:red">*</span></label>
+                <div style="display:flex; gap:10px;">
+                    <input type="text" id="password" placeholder="Tu contraseña" required>
+                    <button type="button" id="btnGenPass" class="btn btn-green" style="white-space: nowrap;">⚡ Generar</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea id="description" rows="4" placeholder="Notas adicionales..."></textarea>
+            </div>
+
+            <div class="actions" style="text-align: right; margin-top: 20px;">
+                <button type="button" id="btnCancel" class="btn btn-red">Cancelar</button>
+                <button type="submit" class="btn btn-blue">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Aviso</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Mensaje...</p>
+                <input type="text" id="modalInput" style="display:none;">
+            </div>
+            <div class="modal-footer">
+                <button id="modalCancelBtn" class="btn btn-red" style="display:none;">Cancelar</button>
+                <button id="modalOkBtn" class="btn btn-blue">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/detail.js"></script>
+</body>
+</html>
